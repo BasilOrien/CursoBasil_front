@@ -10,7 +10,6 @@ const PrivateRoutes = () => {
   useEffect(function () {
     if (localStorage.getItem("storage_type") === "session") {
       window.addEventListener("beforeunload", function (e) {
-
         logout()
       })
     }

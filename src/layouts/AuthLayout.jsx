@@ -22,8 +22,11 @@ const AuthLayout = () => {
         if (location.includes("login")) {
             setSelectedForm(1)
         }
+        if (location.includes("register")) {
+            setSelectedForm(2)
+        }
     }, [selectedForm, location])
-    
+
     return loading ? <Loading /> : <div>
         <Forms selectedForm={selectedForm} />
     </div>
