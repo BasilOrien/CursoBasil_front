@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Forms from '../components/Forms'
 import { checkSession } from '../utils/axios/axios'
 import Loading from '../components/Loading'
-
+import Styles from '../styles/AuthLayout.module.css'
 const AuthLayout = () => {
     const location = useLocation().pathname
     const [selectedForm, setSelectedForm] = useState(null)
@@ -27,7 +27,12 @@ const AuthLayout = () => {
         }
     }, [selectedForm, location])
 
-    return loading ? <Loading /> : <div>
+    return loading ? <Loading /> : <div className={Styles.container}>
+        <div className={Styles.logocontainer}>
+            <h1>BasilOrien W.D</h1>
+            <h3>Desarrollo Web</h3>
+            <p>Imagina, nosotros hacemos real.</p>
+        </div>
         <Forms selectedForm={selectedForm} />
     </div>
 }

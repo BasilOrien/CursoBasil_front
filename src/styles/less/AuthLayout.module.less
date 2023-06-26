@@ -1,0 +1,41 @@
+@import url(main.less);
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(5, 20%);
+    height: 100%;
+    background-color: black ;
+    background: url('../storage/img/login_bg.jpg');
+    background-size: cover;
+    background-repeat: none;
+    .logocontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-row-start: 2;
+        grid-row-end: 5;
+
+        h1 {
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px @mainColor;
+        }
+
+        h3 {
+            font-size: xx-large;
+            color: white;
+            text-shadow: 2px 2px @mainColor;
+
+        }
+
+        p {
+            font-size: x-large;
+            color: white;
+            text-shadow: 2px 2px @mainColor;
+
+        }
+
+    }
+}

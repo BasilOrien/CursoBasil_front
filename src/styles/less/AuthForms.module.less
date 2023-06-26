@@ -1,0 +1,86 @@
+@import url(main.less);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    background-color: #02735e8b;
+    border-radius: @medium_bRadius 0 0 @medium_bRadius;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+
+}
+
+.formHTitle {
+    margin-bottom: @large_padding;
+    font-size: xx-large;
+    color: white;
+    text-shadow: 2px 2px @mainColor;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffc2;
+    padding: .4em;
+    box-shadow: 0 0 5px @mainColor;
+    border-radius: @sm_bRadius;
+    width: 70%;
+    min-width: 345px;
+
+    h2 {
+        text-decoration: underline;
+        margin-bottom: @soft_padding;
+        text-align: center;
+        text-shadow: 1px 1px white;
+    }
+
+    input {
+        background-color: #ffffff7a;
+
+        font-size: large;
+        padding: @soft_padding;
+        border-radius: @mini_bRadius;
+        border: 1px solid gray;
+        text-align: center;
+        margin: 1px;
+        box-shadow: 0 0 2px @mainColor;
+    }
+
+    .checkBox_container {
+        padding: @soft_padding;
+    }
+
+    label {}
+
+    .submit {
+        background-color:lightgray;
+        box-shadow: 0 0 4px black;
+        &:hover {
+            font-weight: bold;
+            background-color: gray;
+            text-shadow: 1px 1px black;
+            color: white;
+            box-shadow: 0 0 10px @green_03;
+        }
+    }
+}
+
+.inputText {
+    &:first-child {}
+}
+
+.changeform {
+    margin-top: @medium_padding;
+    color: white;
+    text-shadow: 1px 1px @mainColor;
+    a {
+    color:coral;
+    text-shadow: 2px 1px @mainColor;
+    }
+}

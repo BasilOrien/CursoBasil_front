@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { login } from '../utils/axios/axios'
+import Styles from '../styles/AuthForms.module.css'
 
 const Login = () => {
     const [username, setUsername] = useState("")
@@ -23,33 +24,42 @@ const Login = () => {
         login(String(username), String(password)).then(response => {
             if (response === true) {
                 return window.location.replace("/")
+            } else {
+                return alert("Usuario o contraseña incorrectos.")
             }
         })
     }
 
     return (
-        <div>
-            <form onSubmit={(e) => onSubmitHandler(e)}>
+        <div className={Styles.container}>
+            <h2 className={Styles.formHTitle}>Bienvenido de Nuevo!</h2>
+            <form className={Styles.form} onSubmit={(e) => onSubmitHandler(e)}>
                 <h2>Inicia sesión</h2>
-                <input onChange={(e) => setUsername(e.target.value)}
+                <input className={Styles.inputText} onChange={(e) => setUsername(e.target.value)}
                     value={username}
                     type="text"
                     name="username"
                     id="username_field"
                     placeholder='Ingresá tu usuario'
                 />
-                <input onChange={(e) => setPassword(e.target.value)}
+                <input className={Styles.inputText} onChange={(e) => setPassword(e.target.value)}
                     value={password}
                     type="password"
                     name="password"
                     id="password_field"
                     placeholder='Ingresá tu contraseña'
                 />
-                <input type="submit" value="Iniciar sesión" />
-                <label htmlFor="storage_type">Mantener la sesión iniciada?</label>
-                <input onChange={(e) => selectStorage(e)} type="checkbox" name="storage_type" id="storage_type" />
+                <input
+                    className={Styles.submit}
+
+                    type="submit" value="Iniciar sesión" />
+                <div className={Styles.checkBox_container}>
+                    <label htmlFor="storage_type">Mantener la sesión iniciada?</label>
+                    <input onChange={(e) => selectStorage(e)} type="checkbox" name="storage_type" id="storage_type" />
+
+                </div>
             </form>
-            <h3>¿No tenes una cuenta? {<Link to={"/auth/register"}>Registrate!</Link>}</h3>
+            <h3 className={Styles.changeform}>¿No tenes una cuenta? {<Link to={"/auth/register"}>Registrate!</Link>}</h3>
         </div>
     )
 }

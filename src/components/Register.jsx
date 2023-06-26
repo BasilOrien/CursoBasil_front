@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { register } from '../utils/axios/axios'
+import Styles from '../styles/AuthForms.module.css'
 
 const Register = () => {
   const [firstName, setFirstName] = useState("")
@@ -37,8 +38,10 @@ const Register = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={(e) => onSubmitHandler(e)}>
+    <div className={Styles.container}>
+      <h2 className={Styles.formHTitle}>Bienvenido!</h2>
+
+      <form className={Styles.form} onSubmit={(e) => onSubmitHandler(e)}>
         <h2>Registrate</h2>
         <input
           onChange={(e) => setFirstName(e.target.value)}
@@ -88,10 +91,11 @@ const Register = () => {
           placeholder='Confirma tu contraseña'
         />
         <input
+          className={Styles.submit}
           type="submit" value="Registrarme"
         />
       </form>
-      <h3>Ya tenes una cuenta? {<Link to={"/auth/login"}>Iniciá sesión</Link>}</h3>
+      <h3 className={Styles.changeform}>Ya tenes una cuenta? {<Link to={"/auth/login"}>Iniciá sesión</Link>}</h3>
     </div>
   )
 }
