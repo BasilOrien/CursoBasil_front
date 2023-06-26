@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainTitle {
+  margin: 1em 0;
+}
+.dataContainer {
+  display: flex;
+  padding: 1em;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: c;
+}
+.ul {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  list-style: none;
+  margin: 0.4em;
+  border-radius: 7px;
+  box-shadow: 0 0 15px #0D0D0D;
+  padding: 0.2em;
+}
+.ul li {
+  margin: 0.4em;
+}
+.ul h3 {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.ul button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  width: 100%;
+}
+.ul input,
+.ul button {
+  font-size: large;
+  padding: 0.2em;
+}
+.ul_card {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  list-style: none;
+  margin: 0.4em;
+  border-radius: 7px;
+  box-shadow: 0 0 15px #0D0D0D;
+  padding: 0.2em;
+}
+.ul_card li {
+  margin: 0.4em;
+}
+.ul_card h3 {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.ul_card button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  width: 100%;
+}
+.ul_card input,
+.ul_card button {
+  font-size: large;
+  padding: 0.2em;
+}
+.pictureContainer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: -1;
+  background-color: lightgray;
+}
+.profilePicture {
+  width: 150px;
+}
+.cuota {
+  grid-column-start: 3;
+}
+.fechapago {
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+.studentCardH3 {
+  background-color: gray;
+  border-radius: 10px;
+}
+.verifyBtn {
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #dfd9d9;
+  border: 1px solid lightgray;
+  width: 100%;
+  font-size: large;
+  box-shadow: 0 0 5px #0D0D0D;
+  padding: 0.2em;
+}
+.verifyBtn:hover {
+  background-color: lightgray;
+}

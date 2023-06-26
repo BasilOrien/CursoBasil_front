@@ -1,0 +1,31 @@
+@import url(main.less);
+
+.m_holderContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightcyan;
+    height: 200px;
+    width: 100%;
+    user-select: none;
+}
+
+.roud_square_child {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+    width: 10em;
+    height: 10em;
+    border-radius: @medium_bRadius;
+    background-color: @green_02;
+    box-shadow: 1px 1px 10px @mainColor;
+    overflow: hidden;
+    justify-content: center;
+
+   h2 {
+    text-align: center;
+   }
+   h4 {
+    text-align: center;
+   }
+}

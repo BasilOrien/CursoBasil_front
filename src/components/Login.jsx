@@ -21,8 +21,9 @@ const Login = () => {
             return alert("Debes completar todos los campos")
         }
 
-        login(String(username), String(password)).then(response => {
+        login(String(username), String(password)).then(async function (response) {
             if (response === true) {
+              
                 return window.location.replace("/")
             } else {
                 return alert("Usuario o contraseña incorrectos.")

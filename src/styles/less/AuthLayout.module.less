@@ -5,10 +5,11 @@
     grid-template-columns: 60% 40%;
     grid-template-rows: repeat(5, 20%);
     height: 100%;
-    background-color: black ;
+    background-color: black;
     background: url('../storage/img/login_bg.jpg');
     background-size: cover;
     background-repeat: none;
+
     .logocontainer {
         display: flex;
         flex-direction: column;
@@ -37,5 +38,31 @@
 
         }
 
+    }
+}
+
+.header {
+    display: flex;
+
+    background-color: rgba(0, 0, 0, 0.503);
+    height: 50px;
+
+    ul {
+
+        display: flex;
+        align-items: center;
+        font-size: large;
+        list-style: none;
+        justify-content: space-evenly;
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
 }

@@ -37,3 +37,14 @@ export async function checkSession() {
     return data
 }
 
+export async function sendVerifyCode() {
+    const axiosGet = await axios.get(`${process.env.REACT_APP_API_URL}/user/setverify`, { withCredentials: true })
+    const data = await axiosGet.data
+    return data
+}
+
+export async function verifyCode(code) {
+    const axiosPost = await axios.post(`${process.env.REACT_APP_API_URL}/user/verifyCode`, { verifyCode: code }, { withCredentials: true })
+    const data = axiosPost.data
+    return data
+}

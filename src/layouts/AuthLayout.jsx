@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Forms from '../components/Forms'
 import { checkSession } from '../utils/axios/axios'
 import Loading from '../components/Loading'
@@ -28,6 +28,19 @@ const AuthLayout = () => {
     }, [selectedForm, location])
 
     return loading ? <Loading /> : <div className={Styles.container}>
+        <header className={Styles.header}>
+            <ul>
+                <li>
+                    <Link>Contactame</Link>
+                </li>
+                <li>
+                    <Link>Info</Link>
+                </li>
+                <li>
+                    <Link>Ayudame a crecer</Link>
+                </li>
+            </ul>
+        </header>
         <div className={Styles.logocontainer}>
             <h1>BasilOrien W.D</h1>
             <h3>Desarrollo Web</h3>

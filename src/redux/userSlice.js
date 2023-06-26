@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const fetchLocalUser = createAsyncThunk('fetchLocalUser', async function () {
-    const axiosResponse = await axios.get("/user/userdata", { withCredentials: true })
+export const fetchLocalUser = createAsyncThunk('fetchLocalUser', async function () {
+    const axiosResponse = await axios.get(`${process.env.REACT_APP_API_URL}/user/userdata`, { withCredentials: true })
     const data = await axiosResponse.data
     return data
 })
